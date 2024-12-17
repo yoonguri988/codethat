@@ -12,10 +12,12 @@ function Nav() {
           <img src={logoImg} alt="Codethat Logo" />
         </Link>
         <ul className={styles.menu}>
-          <Link to="/courses">
-            <li>카탈로그</li>
-          </Link>
-          <li>커뮤니티</li>
+          <li>
+            <Link to="/courses">카탈로그</Link>
+          </li>
+          <li>
+            <Link to="/questions">커뮤니티</Link>
+          </li>
           <li>
             <UserMenu />
           </li>
