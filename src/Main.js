@@ -11,9 +11,9 @@ function Main() {
       <App>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="course" element={<CourseListPage />} />
+          <Route path="courses" element={<CourseListPage />} />
           <Route
-            path="course/react-frontend-development"
+            path="courses/react-frontend-development"
             element={<CoursePage />}
           />
           <Route path="wishlist" element={<WishlistPage />} />
