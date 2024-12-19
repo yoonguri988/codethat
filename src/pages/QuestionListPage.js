@@ -37,7 +37,7 @@ function QuestionItem({ question }) {
 function QuestionListPage() {
   const [searchParams, setSearchParams] = useSearchParams();
   const initKeyword = searchParams.get("keyword");
-  const [keyword, setKeyword] = useState(initKeyword);
+  const [keyword, setKeyword] = useState(initKeyword || "");
   const questions = getQuestions(initKeyword);
 
   const handleKeywordChange = (e) => setKeyword(e.target.value);
