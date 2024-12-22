@@ -26,3 +26,4 @@
 ### 24.12.22 issue
 
 - useNavigate로 페이지 이동하기
+- react-helmet으로 페이지 제목 설정하기
