@@ -22,3 +22,8 @@
 - (실습) 없는 질문 처리하기
 - useSearchParams로 쿼리 사용하기
 - (실습) 질문 검색창 만들기
+
+### 24.12.22 issue
+
+- useNavigate로 페이지 이동하기
+- react-helmet으로 페이지 제목 설정하기

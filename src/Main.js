@@ -7,26 +7,32 @@ import WishlistPage from "./pages/WishlistPage";
 import QuestionPage from "./pages/QuestionPage";
 import QuestionListPage from "./pages/QuestionListPage";
 import NotFoundPage from "./pages/NotFoundPage";
+import { Helmet } from "react-helmet";
 
 function Main() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />}>
-          <Route index element={<HomePage />} />
-          <Route path="courses">
-            <Route index element={<CourseListPage />} />
-            <Route path=":courseSlug" element={<CoursePage />} />
+    <>
+      <Helmet>
+        <title>Codethat - 코딩이 처음이라면, 코드댓</title>
+      </Helmet>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<App />}>
+            <Route index element={<HomePage />} />
+            <Route path="courses">
+              <Route index element={<CourseListPage />} />
+              <Route path=":courseSlug" element={<CoursePage />} />
+            </Route>
+            <Route path="questions">
+              <Route index element={<QuestionListPage />} />
+              <Route path=":questionId" element={<QuestionPage />} />
+            </Route>
+            <Route path="wishlist" element={<WishlistPage />} />
+            <Route path="*" element={<NotFoundPage />} />
           </Route>
-          <Route path="questions">
-            <Route index element={<QuestionListPage />} />
-            <Route path=":questionId" element={<QuestionPage />} />
-          </Route>
-          <Route path="wishlist" element={<WishlistPage />} />
-          <Route path="*" element={<NotFoundPage />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 

@@ -1,24 +1,24 @@
-import classNames from 'classnames';
-import Container from './Container';
-import styles from './ListPage.module.css';
-import catalog from '../assets/catalog.svg';
-import community from '../assets/community.svg';
+import classNames from "classnames";
+import Container from "./Container";
+import styles from "./ListPage.module.css";
+import catalog from "../assets/catalog.svg";
+import community from "../assets/community.svg";
 
 const ICON = {
   catalog: {
     src: catalog,
-    alt: '책',
+    alt: "책",
   },
   community: {
     src: community,
-    alt: '말풍선',
+    alt: "말풍선",
   },
 };
 
 function ListPage({
-  variant = 'catalog',
-  title = '',
-  description = '',
+  variant = "catalog",
+  title = "",
+  description = "",
   children,
 }) {
   const icon = ICON[variant] || ICON.catalog;
