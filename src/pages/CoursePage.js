@@ -5,10 +5,11 @@ import Card from "../components/Card";
 import CourseIcon from "../components/CourseIcon";
 import getCourseColor from "../utils/getCourseColor";
 import styles from "./CoursePage.module.css";
-import { Navigate, useParams } from "react-router-dom";
+import { Navigate, useNavigate, useParams } from "react-router-dom";
 
 function CoursePage() {
   const { courseSlug } = useParams();
+  const navigate = useNavigate();
   const course = getCourseBySlug(courseSlug);
   const courseColor = getCourseColor(course?.code);
 
@@ -20,8 +21,11 @@ function CoursePage() {
     borderTopColor: courseColor,
   };
 
+  //코스 담기 실행
   const handleAddWishlistClick = () => {
     addWishlist(course?.slug);
+    // 위시페이지로 이동
+    navigate("/wishlist");
   };
 
   return (
